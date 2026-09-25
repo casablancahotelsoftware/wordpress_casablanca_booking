@@ -1,0 +1,31 @@
+---
+title: Reference
+sidebar_position: 7
+---
+
+## REST routes
+
+| Route | Access | Purpose |
+| --- | --- | --- |
+| `GET /wp-json/casablanca-booking/v1/calendar` | Public | Live calendar months payload |
+| `GET /wp-json/casablanca-booking/v1/offers` | Public | Booking offers for date range |
+| `GET /wp-json/casablanca-booking/v1/catalog` | Editors | Room type and package dropdown data |
+| Redirect via `?casablanca_booking_redirect=1` | Public | Server-side 303 IBE handover |
+
+## WP-CLI
+
+```bash
+wp casablanca-booking sync [--site=1] [--force] [--days=14]
+```
+
+## Filters
+
+* `casablanca_booking_theme_css` — modify per-site CSS before output
+
+## Cron hook
+
+* `casablanca_booking_daily_sync`
+
+## Database tables
+
+Prefixed with `{wpdb.prefix}casablanca_`: `configuration`, `availability`, `roomtype`, `rate`, `synclog`.

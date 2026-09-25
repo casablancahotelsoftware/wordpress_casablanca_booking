@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CASABLANCA Booking Engine 1.0.0\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Auto"
+msgstr "Auto"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "CASABLANCA Booking"
+msgstr "CASABLANCA Booking"
+
+msgid "Search availability"
+msgstr "Rechercher la disponibilité"
+
+msgid "Adults"
+msgstr "Adultes"
+
+msgid "Children"
+msgstr "Enfants"
+
+msgid "Book now"
+msgstr "Réserver"
+
+msgid "from"
+msgstr "à partir de"

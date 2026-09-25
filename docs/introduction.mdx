@@ -1,0 +1,33 @@
+---
+title: CASABLANCA Booking for WordPress
+sidebar_position: 1
+---
+
+## What this plugin does
+
+* **Background sync** — pulls room types, rates/packages, and calendar prices from the CASABLANCA BE v2 API into local tables.
+* **SSR widgets** — Gutenberg blocks/shortcodes replace legacy JavaScript web widgets with crawlable HTML and JSON-LD (price teaser).
+* **Detail pages** — overview cards can link to `/{detail-page}/{slug}/`; the Room/Package details block resolves the synced slug (no fallback id required on live URLs).
+* **PCI-safe handover** — guests are redirected to the CASABLANCA booking engine; WordPress never handles payment data.
+
+## Widgets
+
+| Legacy widget | WordPress block / shortcode |
+| --- | --- |
+| Header booking snippet | Search bar |
+| Buchbarkeitskalender | Availability calendar |
+| Zimmertypen-Widget | Room types (+ optional room detail page) |
+| Pauschalen-Widget | Packages (+ optional package detail page) |
+| SEO price block | Price teaser |
+
+## Author
+
+**Martin Hairer** — martin.hairer@casablanca.at
+
+## Requirements
+
+The plugin is free to install. To sync data and show working booking widgets, configure a **CASABLANCA Booking Engine** account with a valid **API key** (Tenant ID and API key in the admin). Without that backend, the plugin installs but cannot reach live availability or the booking flow.
+
+## License
+
+The plugin source is free software under **AGPL-3.0-only**; you may use, modify, and share it under that license. Copyright CASABLANCA hotelsoftware GmbH. See `LICENSE` in the plugin root. The AGPL license is separate from the CASABLANCA Booking Engine service and API key required for live operation.

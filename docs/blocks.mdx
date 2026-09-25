@@ -1,0 +1,61 @@
+---
+title: Blocks and shortcodes
+sidebar_position: 4
+---
+
+## Gutenberg blocks
+
+* `casablanca/search-bar`
+* `casablanca/calendar`
+* `casablanca/room-types`
+* `casablanca/packages`
+* `casablanca/room-detail`
+* `casablanca/package-detail`
+* `casablanca/price-teaser`
+
+## Shortcodes (Classic Editor, page builders)
+
+* `[casablanca_search_bar]`
+* `[casablanca_calendar]`
+* `[casablanca_room_types]`
+* `[casablanca_packages]`
+* `[casablanca_room_detail]`
+* `[casablanca_package_detail]`
+* `[casablanca_price_teaser]`
+
+Pass attributes as shortcode keys, e.g. `[casablanca_calendar windowDays="90" appearance="compact"]`.
+
+## Linking overview cards to detail pages
+
+Room and package overviews can open a dedicated detail page instead of jumping straight to the IBE.
+
+1. Create a page that will show one room or package (for example **Pakete** or **Zimmer**).
+2. Place the **Room details** (`casablanca/room-detail`) or **Package details** (`casablanca/package-detail`) block on that page.
+3. On the overview block (**Room types** / **Packages**), set **Card link** to **Details** and select that detail page.
+4. Publish both pages.
+
+Public URLs then look like:
+
+```text
+/{detail-page-slug}/{synced-item-slug}/
+```
+
+Example: `/pakete/skispass-im-jaenner-inkl-kt/`
+
+The last path segment is the **slug stored at sync time**. The detail block resolves the item from that slug. A fallback room/package id is optional and only used when the URL has no slug (for example when previewing the detail page alone in the editor).
+
+After installing or updating the plugin, open **Settings → Permalinks** and click **Save** once so WordPress registers the detail rewrite rules. The plugin also flushes rules automatically on activation and when the plugin rewrite version changes.
+
+## Live calendar
+
+The calendar block fetches availability through the WordPress REST route `casablanca-booking/v1/calendar`. The browser never calls the CASABLANCA API directly.
+
+## Language
+
+Every block has a **Language** control: **Auto**, Deutsch, English, Italiano, Français (`''` / `de` / `en` / `it` / `fr`).
+
+* **Auto** follows the site locale (`determine_locale()`): `de_*` → German, `it_*` → Italian, `fr_*` → French, otherwise English.
+* An explicit language switches **all** plugin UI strings (templates, footnotes, buttons, `window.CB_LABELS`) and the API `culture` among en/de/it/fr — even when the site itself is English.
+* Per-block label overrides (heading, book now, submit, …) still win when filled in.
+
+Strings ship in `resources/i18n/widget-strings.php` and do not depend on `load_plugin_textdomain` for the frontend widgets.

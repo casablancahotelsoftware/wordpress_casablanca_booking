@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "casablanca/price-teaser",
+  "title": "CASABLANCA Price Teaser",
+  "category": "casablanca",
+  "icon": "money-alt",
+  "description": "SEO price block with JSON-LD from synced local prices.",
+  "textdomain": "casablanca-booking",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "appearance": {
+      "type": "string",
+      "default": "default"
+    },
+    "roomType": {
+      "type": "string",
+      "default": ""
+    },
+    "windowDays": {
+      "type": "number",
+      "default": 90
+    },
+    "language": {
+      "type": "string",
+      "default": ""
+    },
+    "labels": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "casablanca-booking-blocks",
+  "keywords": [
+    "CASABLANCA",
+    "booking",
+    "casablanca"
+  ]
+}

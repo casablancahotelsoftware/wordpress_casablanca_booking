@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "casablanca/room-detail",
+  "title": "CASABLANCA Room details",
+  "category": "casablanca",
+  "icon": "admin-home",
+  "description": "Single room detail page (slug from URL, optional fallback for preview).",
+  "textdomain": "casablanca-booking",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "appearance": {
+      "type": "string",
+      "default": "default"
+    },
+    "fallbackRoomType": {
+      "type": "string",
+      "default": ""
+    },
+    "windowDays": {
+      "type": "number",
+      "default": 90
+    },
+    "defaultAdults": {
+      "type": "number",
+      "default": 2
+    },
+    "defaultChildren": {
+      "type": "number",
+      "default": 0
+    },
+    "language": {
+      "type": "string",
+      "default": ""
+    },
+    "stayNights": {
+      "type": "number",
+      "default": 7
+    },
+    "showName": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "showPrice": {
+      "type": "boolean",
+      "default": true
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "ibeLinkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "showDetailCalendar": {
+      "type": "boolean",
+      "default": false
+    },
+    "detailCalendarPosition": {
+      "type": "string",
+      "default": "below"
+    },
+    "detailCalendarInitialMonths": {
+      "type": "number",
+      "default": 1
+    },
+    "detailCalendarOfferMode": {
+      "type": "string",
+      "default": "rates_only"
+    },
+    "labels": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "casablanca-booking-blocks",
+  "keywords": [
+    "CASABLANCA",
+    "booking",
+    "room",
+    "detail"
+  ]
+}

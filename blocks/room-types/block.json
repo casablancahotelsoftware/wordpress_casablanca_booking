@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "casablanca/room-types",
+  "title": "CASABLANCA Room Types",
+  "category": "casablanca",
+  "icon": "building",
+  "description": "SSR room type overview with synced prices.",
+  "textdomain": "casablanca-booking",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "appearance": {
+      "type": "string",
+      "default": "default"
+    },
+    "filterRoomType": {
+      "type": "string",
+      "default": ""
+    },
+    "windowDays": {
+      "type": "number",
+      "default": 90
+    },
+    "defaultAdults": {
+      "type": "number",
+      "default": 2
+    },
+    "defaultChildren": {
+      "type": "number",
+      "default": 0
+    },
+    "language": {
+      "type": "string",
+      "default": ""
+    },
+    "stayNights": {
+      "type": "number",
+      "default": 7
+    },
+    "showName": {
+      "type": "boolean",
+      "default": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
+    },
+    "overviewDescriptionMode": {
+      "type": "string",
+      "default": "teaser"
+    },
+    "overviewDescriptionLimit": {
+      "type": "number",
+      "default": 250
+    },
+    "overviewLayout": {
+      "type": "string",
+      "default": "grid"
+    },
+    "showPrice": {
+      "type": "boolean",
+      "default": true
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "cardLinkType": {
+      "type": "string",
+      "default": "book"
+    },
+    "ibeLinkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "detailPageId": {
+      "type": "number",
+      "default": 0
+    },
+    "labels": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "casablanca-booking-blocks",
+  "keywords": [
+    "CASABLANCA",
+    "booking",
+    "casablanca"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "casablanca/search-bar",
+  "title": "CASABLANCA Search Bar",
+  "category": "casablanca",
+  "icon": "calendar",
+  "description": "Header booking search bar with PCI-safe IBE handover.",
+  "textdomain": "casablanca-booking",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "appearance": {
+      "type": "string",
+      "default": "default"
+    },
+    "defaultRooms": {
+      "type": "number",
+      "default": 1
+    },
+    "defaultAdults": {
+      "type": "number",
+      "default": 2
+    },
+    "defaultChildren": {
+      "type": "number",
+      "default": 0
+    },
+    "defaultChildrenAges": {
+      "type": "string",
+      "default": ""
+    },
+    "compactOccupancy": {
+      "type": "boolean",
+      "default": true
+    },
+    "ibeLinkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "language": {
+      "type": "string",
+      "default": ""
+    },
+    "labels": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "casablanca-booking-blocks",
+  "keywords": [
+    "CASABLANCA",
+    "booking",
+    "casablanca"
+  ]
+}

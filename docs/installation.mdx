@@ -1,0 +1,20 @@
+---
+title: Installation
+sidebar_position: 2
+---
+
+## Local zip upload
+
+1. Build the distributable zip: `./bin/build-zip.sh`
+2. In WordPress admin go to **Plugins → Add New → Upload Plugin**
+3. Choose `dist/casablanca-booking.zip` and activate
+
+## Directory install
+
+Copy the `casablanca-booking` folder into `wp-content/plugins/` and activate from **Plugins**.
+
+## First configuration
+
+Open **CASABLANCA Booking** in the admin menu, enter Tenant ID and API key, then save. On first successful connection test the plugin schedules daily sync and runs an initial import.
+
+After activation (or a plugin update that changes rewrite rules), open **Settings → Permalinks** and click **Save** once. The plugin also flushes rewrite rules on activation and when its rewrite version option changes, so detail URLs like `/{detail-page}/{slug}/` work without a manual save in most cases — saving Permalinks remains the reliable fallback.

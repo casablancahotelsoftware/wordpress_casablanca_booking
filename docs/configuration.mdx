@@ -1,0 +1,34 @@
+---
+title: Configuration
+sidebar_position: 3
+---
+
+## Admin module
+
+**CASABLANCA Booking** provides three tabs:
+
+* **Configuration** — credentials, IBE link style, site CSS overrides
+* **Mapping codes** — read-only room type and package IDs after sync
+* **Sync logs** — last 50 import runs
+
+## Environment mode (staging)
+
+Not editable in the admin UI. Set in `wp-config.php`:
+
+```php
+define('CASABLANCA_BOOKING_ENV', 'production'); // staging | development
+```
+
+Production API/IBE hosts are rewritten at runtime only when the constant selects staging or development.
+
+## Encrypted API key
+
+Stored encrypted using libsodium and `AUTH_KEY`. Leave the API key field blank on edit to keep the existing key.
+
+## CSS overrides
+
+1. **Backend** — Site CSS overrides textarea (scoped to `.cb-widget`)
+2. **Theme** — add `casablanca-booking.css` to your theme or child theme
+3. **Filter** — `casablanca_booking_theme_css`
+
+Disable bundled CSS via block/shortcode attribute `includeCss="0"` or dequeue handle `casablanca-booking-widget`.

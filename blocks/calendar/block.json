@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "casablanca/calendar",
+  "title": "CASABLANCA Availability Calendar",
+  "category": "casablanca",
+  "icon": "calendar-alt",
+  "description": "Live availability calendar with min-stay enforcement.",
+  "textdomain": "casablanca-booking",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "appearance": {
+      "type": "string",
+      "default": "default"
+    },
+    "preselectRoomCategory": {
+      "type": "string",
+      "default": ""
+    },
+    "defaultRooms": {
+      "type": "number",
+      "default": 1
+    },
+    "defaultAdults": {
+      "type": "number",
+      "default": 2
+    },
+    "defaultChildren": {
+      "type": "number",
+      "default": 0
+    },
+    "defaultChildrenAges": {
+      "type": "string",
+      "default": ""
+    },
+    "language": {
+      "type": "string",
+      "default": ""
+    },
+    "ibeLinkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "windowDays": {
+      "type": "number",
+      "default": 90
+    },
+    "calendarInitialMonths": {
+      "type": "number",
+      "default": 1
+    },
+    "calendarOfferMode": {
+      "type": "string",
+      "default": "none"
+    },
+    "showEnquiryButton": {
+      "type": "boolean",
+      "default": false
+    },
+    "enquiryUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "enquiryLinkTarget": {
+      "type": "string",
+      "default": "_self"
+    },
+    "labels": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "editorScript": "casablanca-booking-blocks",
+  "keywords": [
+    "CASABLANCA",
+    "booking",
+    "casablanca"
+  ]
+}

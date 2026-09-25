@@ -1,0 +1,23 @@
+---
+title: Background sync
+sidebar_position: 5
+---
+
+## Daily scheduler
+
+On first configuration save the plugin registers a **daily** WP-Cron event staggered to the save time.
+
+For production sites with low traffic, configure a system cron:
+
+```bash
+*/15 * * * * cd /path/to/wordpress && wp cron event run --due-now
+```
+
+## Manual sync
+
+* Admin: **Sync now** or **Clear synced data and sync**
+* WP-CLI: `wp casablanca-booking sync [--days=14] [--force]`
+
+## Sync log
+
+Each run records status (`running`, `success`, `partial`, `failure`), rows written/changed, and a message. View the latest 50 entries under **Sync logs**.

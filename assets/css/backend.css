@@ -1,0 +1,294 @@
+/* ---- Backend module (minimal) ---------------------------------------- */
+
+.cb-backend__table {
+    margin-top: 1rem;
+}
+
+.cb-backend__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+}
+
+.cb-backend__form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.cb-backend .form-section {
+    margin-bottom: 1.5rem;
+}
+
+.cb-backend__tabs {
+    margin: 1rem 0 1.5rem;
+}
+
+.cb-backend__staging-notice {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--typo3-state-warning-border-color, #ffc107);
+    background: var(--typo3-state-warning-bg, #fff8e1);
+    color: var(--typo3-state-warning-color, #664d03);
+    font-size: 0.875rem;
+}
+
+.cb-backend__connection {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--typo3-component-border-color, #ced4da);
+    background: var(--typo3-surface-container-default, #f8f9fa);
+}
+
+.cb-backend__connection-badge {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-top: 0.35rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: #6c757d;
+}
+
+.cb-backend__connection--ok {
+    border-color: #198754;
+}
+
+.cb-backend__connection--ok .cb-backend__connection-badge {
+    background: #198754;
+}
+
+.cb-backend__connection--error {
+    border-color: #dc3545;
+}
+
+.cb-backend__connection--error .cb-backend__connection-badge {
+    background: #dc3545;
+}
+
+.cb-backend__connection-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.cb-backend__connection-message,
+.cb-backend__connection-time {
+    font-size: 0.875rem;
+    opacity: 0.9;
+}
+
+.cb-backend__url-preview {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    margin: 0;
+    padding: 0.375rem 0.75rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: var(--typo3-font-family-monospace, ui-monospace, monospace);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--typo3-text-color-base, #212529);
+    background-color: var(--typo3-surface-container-default, #eef1f4);
+    border: 1px solid var(--typo3-component-border-color, #adb5bd);
+    border-radius: var(--typo3-border-radius, 0.25rem);
+}
+
+.cb-backend__url-preview--empty {
+    font-style: italic;
+    opacity: 0.85;
+}
+
+.cb-backend__mapping {
+    margin-top: 1rem;
+}
+
+.cb-backend__mapping h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.cb-backend__space-header {
+    margin-bottom: 1.5rem;
+}
+
+.cb-backend__space-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 1rem;
+    margin: 0.75rem 0 0;
+}
+
+.cb-backend__space-meta dt {
+    font-weight: 600;
+}
+
+.cb-backend__space-meta dd {
+    margin: 0;
+}
+
+.cb-backend__mapping-table code {
+    font-size: 0.85em;
+}
+
+.cb-backend__mapping-table--grouped .cb-backend__mapping-room td {
+    vertical-align: top;
+}
+
+.cb-backend__mapping-rates-row td {
+    padding-top: 0;
+    border-top: none;
+}
+
+.cb-backend__mapping-nested {
+    margin: 0.25rem 0 1rem 1.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--typo3-component-border-color, #ced4da);
+    background: var(--typo3-surface-container-default, #f8f9fa);
+}
+
+.cb-backend__mapping-nested strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.cb-backend__mapping-table--nested {
+    margin-bottom: 0;
+    background: transparent;
+}
+
+html[data-color-scheme="dark"] .cb-backend__mapping-nested,
+body[data-color-scheme="dark"] .cb-backend__mapping-nested,
+[data-color-scheme="dark"] .cb-backend__mapping-nested {
+    background: #2b3035;
+    border-left-color: #495057;
+}
+
+html[data-color-scheme="dark"] .cb-backend__url-preview,
+body[data-color-scheme="dark"] .cb-backend__url-preview,
+[data-color-scheme="dark"] .cb-backend__url-preview {
+    color: #e9ecef;
+    background-color: #2b3035;
+    border-color: #495057;
+}
+
+html[data-color-scheme="dark"] .cb-backend__connection,
+body[data-color-scheme="dark"] .cb-backend__connection,
+[data-color-scheme="dark"] .cb-backend__connection {
+    color: #e9ecef;
+    background-color: #2b3035;
+    border-color: #495057;
+}
+
+.cb-backend__form-actions--top {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.cb-backend__log-status {
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.cb-backend__log-status--success {
+    background: #d1e7dd;
+    color: #0f5132;
+}
+
+.cb-backend__log-status--running {
+    background: #cff4fc;
+    color: #055160;
+}
+
+.cb-backend__log-status--partial {
+    background: #fff3cd;
+    color: #664d03;
+}
+
+.cb-backend__log-status--failure {
+    background: #f8d7da;
+    color: #842029;
+}
+
+.cb-backend__token-reference {
+    margin-bottom: 1rem;
+}
+
+.cb-backend__token-reference summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cb-backend__token-table-wrap {
+    max-height: 18rem;
+    overflow: auto;
+    margin: 0.5rem 0 1rem;
+}
+
+.cb-backend__token-table code,
+.cb-backend__theme-css {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.875rem;
+}
+
+.cb-backend__scheduler {
+    margin: 1.25rem 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #fff;
+    max-width: 52rem;
+}
+
+.cb-backend__scheduler h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+
+.cb-backend__scheduler-meta {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.35rem 1rem;
+    margin: 0 0 0.75rem;
+}
+
+.cb-backend__scheduler-meta dt {
+    font-weight: 600;
+    margin: 0;
+}
+
+.cb-backend__scheduler-meta dd {
+    margin: 0;
+}
+
+.cb-backend__scheduler-warning {
+    color: #8a5a00;
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 0.5rem 0.75rem;
+}
+
+.cb-backend__status--ok {
+    color: #0f5132;
+    font-weight: 600;
+}
+
+.cb-backend__status--error {
+    color: #842029;
+    font-weight: 600;
+}
+
+.cb-block-editor-preview {
+    min-height: 4rem;
+}

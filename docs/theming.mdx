@@ -1,0 +1,23 @@
+---
+title: Theming
+sidebar_position: 6
+---
+
+## CSS architecture
+
+All widgets use the `.cb-` prefix and `--cb-*` design tokens on `.cb-widget`.
+
+Layer order:
+
+1. Bundled `assets/css/widget.css`
+2. Block attributes `themeAccent` / `themeRadius` (inline style)
+3. Backend **Site CSS overrides**
+4. Theme file `casablanca-booking.css`
+
+## Appearance modes
+
+Block attribute `appearance`: `default`, `inherit`, `compact`.
+
+## Disable bundled CSS
+
+Set `includeCss` to false on the block or shortcode when your theme ships a complete replacement. JavaScript is always loaded.
